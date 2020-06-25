@@ -1,7 +1,10 @@
 require("dotenv").config();
 
 // process.env.Port ||
-const Port = process.env.MONGODB_URI || process.env.DB_HOST;
+// const Port = process.env.MONGODB_URI || process.env.DB_HOST;
+const Port =
+  "mongodb://<dbuser>:<dbpassword>@ds051658.mlab.com:51658/heroku_jzcbn16d";
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
