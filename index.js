@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 // process.env.Port ||
-const Port = process.env.Port || process.env.DB_HOST;
+const Port = process.env.MONGODB_URI || process.env.DB_HOST;
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
