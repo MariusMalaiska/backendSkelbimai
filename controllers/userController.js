@@ -8,9 +8,9 @@ register = async (req, res) => {
   let user = new UserModel();
 
   user.nickName = data.nickName;
-  user.password = data.password;
   user.email = data.email;
-  user.phonenumber = data.phonenumber;
+  user.password = data.password;
+  // user.phonenumber = data.phonenumber;
 
   try {
     let createdUser = await user.save();

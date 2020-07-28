@@ -23,7 +23,9 @@ createAdvert = async (req, res) => {
     advertItem.price = data.price;
     advertItem.city = data.city;
     advertItem.condition = data.condition;
-    advertItem.itemPicture = `http://localhost:3001/${req.file.path}`;
+    advertItem.itemPicture = `http://localhost:3002/${req.file.path}`;
+    // advertItem.itemPicture = data.itemPicture;
+    // ------
     advertItem.user = user._id;
     // advertItem.userName = user.nickName;
     // advertItem.userphone = user.phonenumber;

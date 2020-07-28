@@ -2,8 +2,8 @@ require("dotenv").config();
 
 // process.env.Port ||
 // const Port = process.env.MONGODB_URI || process.env.DB_HOST;
-const Port =
-  "mongodb://admin11:admin11@ds051658.mlab.com:51658/heroku_jzcbn16d";
+// const Port =
+//   "mongodb://admin11:admin11@ds051658.mlab.com:51658/heroku_jzcbn16d";
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -12,7 +12,7 @@ const cors = require("cors");
 
 const router = require("./routes/routes");
 
-mongoose.connect(Port, {
+mongoose.connect(process.env.DB_HOST, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -37,4 +37,4 @@ app.use(bodyParser.json());
 
 app.use("/v1", router);
 
-app.listen(3001);
+app.listen(3003);
